@@ -69,5 +69,4 @@ venv.bak/
 Thumbs.db
 
 # Project specific
-examples/config.yaml
 *.log

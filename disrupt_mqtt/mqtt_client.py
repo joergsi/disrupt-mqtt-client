@@ -124,13 +124,6 @@ class MQTTClient:
         Returns:
             bool: True if publish was successful, False otherwise
         
-        Example:
-            >>> data = {
-            ...     'timestamp': 1234567890,
-            ...     'location': {'lat': 48.7758, 'lon': 11.4297},
-            ...     'value': 42
-            ... }
-            >>> success = mqtt_client.publish(data)
         """
         try:
             json_payload = json.dumps(payload, indent=indent)

@@ -56,7 +56,6 @@ disrupt-mqtt-client/
 ├── setup.py                   # Package configuration
 ├── requirements.txt           # Dependencies
 ├── readme.md                 # Main documentation
-├── demo.py                   # This demo script
 ├── test_mqtt_client.py       # Basic tests
 └── install_and_demo.sh       # Installation script
 """)
