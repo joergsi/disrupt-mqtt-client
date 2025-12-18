@@ -69,6 +69,12 @@ See the `examples/` directory for complete working examples:
 - `7`: Truck
 - `10`: E-scooter
 
+# Used in
+- [ ] `/home/uu878/disrupt/gevas-kafka/`
+- [ ] `/home/uu878/disrupt/DLR-Urban-Traffic-dataset/`
+- [ ] `/home/uu878/disrupt/disrupt-warning-test/`
 
-# publish to pypi
-
+# Documentation
+- **PACKAGE_INFO.md** - Overview and features
+- **INSTALLATION.md** - Detailed installation guide
+- **examples/** - Working code samples

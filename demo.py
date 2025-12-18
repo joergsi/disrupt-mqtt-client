@@ -50,10 +50,10 @@ valid_config = {
     'HOST': 'city.app.sdk-cloud.de',
     'PORT': 443,
     'TRANSPORT': 'websockets',
-    'TOPIC': '01951455-e265-7ee2-b4e6-dbd5f3cf268a',
-    'SENSORNAME': 'demo_sensor',
-    'USER': 'your-user-uuid',
-    'PW': 'your-password'
+    'TOPIC': 'MQTT Ingest Topic',
+    'SENSORNAME': 'MQTT Sensor Name',
+    'USER': 'MQTT User',
+    'PW': 'MQTT Password'
 }
 
 print("  Valid configuration requires these keys:")

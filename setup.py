@@ -1,24 +1,24 @@
+from pathlib import Path
 from setuptools import setup, find_packages
 
-with open("readme.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="disrupt-mqtt-client",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="joergsi",
+    author_email="joergsi@users.noreply.github.com",
     description="MQTT client for the Disrupt/SDK mobility data platform",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/disrupt-mqtt-client",
+    url="https://github.com/joergsi/disrupt-mqtt-client",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: System :: Networking",
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
@@ -40,8 +40,8 @@ setup(
     },
     keywords="mqtt, mobility, disrupt, sdk, iot, sensor data",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/disrupt-mqtt-client/issues",
-        "Source": "https://github.com/yourusername/disrupt-mqtt-client",
-        "Documentation": "https://github.com/yourusername/disrupt-mqtt-client#readme",
+        "Bug Reports": "https://github.com/joergsi/disrupt-mqtt-client/issues",
+        "Source": "https://github.com/joergsi/disrupt-mqtt-client",
+        "Documentation": "https://github.com/joergsi/disrupt-mqtt-client#readme",
     },
 )

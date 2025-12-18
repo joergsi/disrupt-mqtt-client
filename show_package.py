@@ -6,7 +6,6 @@ This script shows:
 1. Package structure
 2. How to install
 3. How to use
-4. Migration path from existing projects
 """
 
 import os
@@ -109,134 +108,8 @@ print("""
   HOST: "city.app.sdk-cloud.de"
   PORT: 443
   TRANSPORT: "websockets"
-  TOPIC: "01951455-e265-7ee2-b4e6-dbd5f3cf268a"
-  SENSORNAME: "my_sensor"
-  USER: "your-user-uuid"
-  PW: "your-password"
-""")
-
-print_section("🔄 MIGRATION FROM EXISTING PROJECTS")
-
-print("""
-Your existing projects:
-───────────────────────
-  • /home/uu878/disrupt/gevas-kafka/
-  • /home/uu878/disrupt/DLR-Urban-Traffic-dataset/
-  • /home/uu878/disrupt/disrupt-warning-test/
-
-Migration steps:
-────────────────
-  1. Install the package in your project:
-     cd /home/uu878/disrupt/gevas-kafka
-     pip install -e /home/uu878/disrupt/disrupt-mqtt-client
-
-  2. Update imports in your Python files:
-     OLD: from modules.mqtt_client import MQTTClient
-     NEW: from disrupt_mqtt import MQTTClient
-
-  3. That's it! Everything else stays the same.
-
-Example for gevas-kafka:
-────────────────────────
-  # In main_SignalState_fkk.py
-  from disrupt_mqtt import MQTTClient  # ← Changed
-  from modules.kafka_consumer import KafkaConsumer
-  
-  # Rest of code stays the same!
-  mqtt_client = MQTTClient(config)
-  # ... your existing code ...
-  mqtt_client.close()
-
-Example for DLR-Urban-Traffic-dataset:
-──────────────────────────────────────
-  # In rmp_signals.py
-  from disrupt_mqtt import MQTTClient  # ← Changed
-  from modules.position_signals import PositionSignals
-  
-  # Rest of code stays the same!
-  mqtt_client = MQTTClient(config)
-  # ... your existing code ...
-  mqtt_client.close()
-""")
-
-print_section("📚 DOCUMENTATION")
-
-print("""
-Read these files for more information:
-──────────────────────────────────────
-  • QUICKSTART.md    - Quick start guide (START HERE!)
-  • README.md        - Complete API documentation
-  • INSTALLATION.md  - Detailed installation and migration
-  • PACKAGE_INFO.md  - Features and overview
-  • examples/        - Working code samples
-
-View documentation:
-───────────────────
-  cat /home/uu878/disrupt/disrupt-mqtt-client/QUICKSTART.md
-  cat /home/uu878/disrupt/disrupt-mqtt-client/README.md
-  ls /home/uu878/disrupt/disrupt-mqtt-client/examples/
-""")
-
-print_section("🧪 TESTING")
-
-print("""
-Test the package:
-─────────────────
-  # Run demo (no broker needed)
-  python3 /home/uu878/disrupt/disrupt-mqtt-client/demo.py
-
-  # Run basic tests
-  python3 /home/uu878/disrupt/disrupt-mqtt-client/test_mqtt_client.py
-
-  # Try examples (needs real broker)
-  cd /home/uu878/disrupt/disrupt-mqtt-client/examples
-  # Edit config.yaml with your credentials
-  python3 example_basic.py
-""")
-
-print_section("✅ BENEFITS")
-
-print("""
-Why use this package?
-─────────────────────
-  ✓ Single source of truth - Update once, use everywhere
-  ✓ Better error handling - Enhanced logging and validation
-  ✓ Well documented - Examples, guides, docstrings
-  ✓ Type hints - Better IDE autocomplete
-  ✓ Context manager - Automatic cleanup with 'with' statement
-  ✓ Drop-in replacement - Works with existing code
-  ✓ Production ready - Used in real mobility data projects
-  ✓ Easy to maintain - Fix bugs in one place
-""")
-
-print_section("🎯 NEXT STEPS")
-
-print("""
-1. Install the package:
-   pip install -e /home/uu878/disrupt/disrupt-mqtt-client
-
-2. Test the import:
-   python3 -c "from disrupt_mqtt import MQTTClient; print('✓ Works!')"
-
-3. Read the quick start:
-   cat /home/uu878/disrupt/disrupt-mqtt-client/QUICKSTART.md
-
-4. Try an example:
-   cd /home/uu878/disrupt/disrupt-mqtt-client/examples
-   python3 example_basic.py
-
-5. When ready, migrate your projects:
-   - Just change: from modules.mqtt_client import MQTTClient
-   - To: from disrupt_mqtt import MQTTClient
-""")
-
-print_header("📦 Package created successfully!")
-
-print("""
-Your package is ready to use at:
-  /home/uu878/disrupt/disrupt-mqtt-client
-
-Start with QUICKSTART.md for installation and usage instructions.
-
-Happy coding! 🚀
+  TOPIC: "MQTT Ingest Topic"
+  USER: "MQTT User"
+  PW: "MQTT Password"
+  SENSORNAME: "MQTT Sensor Name"
 """)
